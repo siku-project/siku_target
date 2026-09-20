@@ -15,6 +15,7 @@ shared_scripts {
   'config/target.lua',
   'config/reticle.lua',
   'config/menu.lua',
+  'config/interactions.lua',
   'shared/locale.lua',
 }
 
@@ -31,6 +32,9 @@ client_scripts {
   'client/modules/nui.lua',
   'client/modules/input.lua',
   'client/modules/api.lua',
+
+  'client/interactions/vehicle.lua',
+  'client/interactions/self.lua',
 }
 
 ui_page 'web/dist/index.html'
