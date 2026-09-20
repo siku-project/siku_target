@@ -1,0 +1,6 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "menu_back": "Retour",
+  "menu_empty": "Aucune option",
+  "menu_title": "Interactions"
+}
