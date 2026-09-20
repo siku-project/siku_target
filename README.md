@@ -32,9 +32,19 @@ The target owns nothing of the game's rules. Other resources register options on
 | `config/target.lua` | `mode` classic / free, `keybind`, `activation` hold / toggle, `scanInterval`, `rayDistance`, `optionDistance`, `controls`, `debug` |
 | `config/reticle.lua` | `icon` (lucide name), `size`, `passive`, `active` |
 | `config/menu.lua` | `submenus`, `maxVisible`, `width`, `offset`, `closeOnSelect` |
+| `config/interactions.lua` | The built-in interactions: `vehicle` (doors, hood, trunk, seats, distance), `self` |
 | `config/translation.lua` | `language` (`fr` / `en`) |
 
 The config travels to the interface at startup, so a value changed in Lua changes the reticle and the menu without touching the web.
+
+## Built-in interactions
+
+`client/interactions/` ships what every server wants without writing a resource for it, one file per target, registered through the same registry as any other resource. Each family switches off in `config/interactions.lua`.
+
+| File | Target | Options |
+|---|---|---|
+| `vehicle.lua` | Any vehicle | **Doors**, a submenu with each door the model has, the label reading open or close by its state; **Hood** and **Trunk**, the same toggle; **Change seat**, free mode only, a submenu of the free seats: a walk and a climb from outside, a warp from another seat. A locked vehicle offers none of it. |
+| `self.lua` | The player's own ped, free mode only | **Wave**, a first interaction to see the mode work. |
 
 ## API
 
