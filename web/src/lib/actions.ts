@@ -48,10 +48,14 @@ export const actions = {
     }
   },
 
-  hover(hovering: boolean): void {
+  /** A click beside the menu: it closes, the target stays, the camera is free again. */
+  dismiss(): void {
     if (inGame) {
-      void sendNuiCallback('hover', { hovering })
+      void sendNuiCallback('dismiss')
+      return
     }
+
+    target.closeMenu()
   },
 
   close(): void {

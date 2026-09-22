@@ -100,9 +100,9 @@ RegisterNUICallback('siku_target:nui:back', function(_, cb)
   TargetMenu.back()
 end)
 
-RegisterNUICallback('siku_target:nui:hover', function(data, cb)
+RegisterNUICallback('siku_target:nui:dismiss', function(_, cb)
   cb({})
-  TargetInput.setHovering(type(data) == 'table' and data.hovering == true)
+  TargetInput.dismiss()
 end)
 
 RegisterNUICallback('siku_target:nui:click', function(data, cb)
