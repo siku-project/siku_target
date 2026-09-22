@@ -11,7 +11,7 @@ The target owns nothing of the game's rules. Other resources register options on
 
 ## Features
 
-- **Two ways to pick, one engine** — `classic` puts a reticle at the centre of the screen and targets what the camera looks at; `free` frees the pointer and targets what a click lands on, the menu opening next to the pointer where there is room. Options, conditions, menu, submenu and actions are the same code in both modes.
+- **Two ways to pick, one engine** — `classic` puts a reticle at the centre of the screen and targets what the camera looks at: aiming stays free, no pointer, until the target has options; then the menu opens, the pointer comes out and the camera holds still. A click beside the menu closes it and frees the camera, the target staying marked, and a click brings it back. `free` frees the pointer from the start and targets what a click lands on, the menu opening next to the pointer where there is room. Options, conditions, menu, submenu and actions are the same code in both modes.
 - **Every kind of target** — the player's own ped, other players, peds, vehicles, objects, models, one entity by handle or by net id, zones (sphere, box, polygon through the core spatial grid), points, and the world itself for global options.
 - **Options that decide for themselves** — `canInteract(target)` is the only gate: job, grade, permission, state, ownership, anything the registering resource knows. A `distance` per option, an `order`, an icon, a label that may be a function of the target.
 - **Actions without coupling** — `onSelect(target)`, or a client `event`, a `serverEvent` (the target serialized without handles), or an `export` of another resource.

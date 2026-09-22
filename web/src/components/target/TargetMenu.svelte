@@ -110,8 +110,6 @@
     bind:clientHeight={rootHeight}
     role="menu"
     tabindex="-1"
-    onmouseenter={() => actions.hover(true)}
-    onmouseleave={() => actions.hover(false)}
     onclick={(event) => event.stopPropagation()}
     oncontextmenu={(event) => event.preventDefault()}
     onkeydown={(event) => event.key === 'Escape' && actions.close()}
@@ -134,8 +132,6 @@
       bind:clientHeight={subHeight}
       role="menu"
       tabindex="-1"
-      onmouseenter={() => actions.hover(true)}
-      onmouseleave={() => actions.hover(false)}
       onclick={(event) => event.stopPropagation()}
       oncontextmenu={(event) => event.preventDefault()}
       onkeydown={(event) => event.key === 'Escape' && actions.close()}
